@@ -19,3 +19,7 @@ results = maxTemps.collect();
 
 for result in results:
     print(result[0] + "\t{:.2f}F".format(result[1]))
+
+    
+    def normalizeWords(text):
+    return re.compile(r'\W+', re.UNICODE).split(text.lower())
