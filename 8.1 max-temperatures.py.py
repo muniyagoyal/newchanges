@@ -25,3 +25,5 @@ maxTemps = stationTemps.reduceByKey(lambda x, y: min(x,y))
 results = maxTemps.collect();
 
 resuls.collect()
+stationTemps1 = maxTemps1.map(lambda x: (x[01], x[21]))
+maxTemps2 = stationTemp2s.reduceByKey(lambda x, y: max(x,y))
