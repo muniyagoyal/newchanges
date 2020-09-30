@@ -8,6 +8,7 @@ def parseLine(line):
     stationID = fields[0]
     entryType = fields[2]
     temperature = float(fields[3]) * 0.1 * (9.0 / 5.0) + 32.0
+    print("Temperature is:")
     return (stationID, entryType, temperature)
 
 lines = sc.textFile("file:///SparkCourse/1800.csv")
