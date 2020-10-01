@@ -7,7 +7,9 @@ def parseLine(line):
     fields = line.split(',')
     stationID = fields[0]
     entryType = fields[2]
-    temperature = float(fields[3]) * 0.1 * (9.0 / 5.0) + 32.0
+    temperature = float(fields[3]) 
+    print(temperature)
+    print(fields)
     print("Temperature is:")
     return (stationID, entryType, temperature)
 
