@@ -25,3 +25,10 @@ maxTemps = stationTemps.reduceByKey(lambda x, y: min(x,y))
 results = maxTemps.collect();
 
 resuls.collect()
+s = stationTemps.reduceByKey(lambda x, y: max(x,y))
+results = maxTemps.collect();
+
+for result in results:
+    print(result[0] + "\t{:.2f}F".format(result[1]))
+stationTemps = maxTemps.flatMap(lambda x: (x[1], x[2]))
+maxTemps = stationTemps.reduceByKey
