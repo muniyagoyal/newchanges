@@ -17,7 +17,7 @@ maxTemps = parsedLines.filter(lambda x: "TMAX" in x[1])
 stationTemps = maxTemps.map(lambda x: (x[0], x[2]))
 maxTemps = stationTemps.reduceByKey(lambda x, y: max(x,y))
 results = maxTemps.collect();
-
+print("hello")
 for result in results:
     print(result[0] + "\t{:.2f}F".format(result[1]))
 stationTemps = maxTemps.flatMap(lambda x: (x[1], x[2]))
@@ -25,3 +25,5 @@ maxTemps = stationTemps.reduceByKey(lambda x, y: min(x,y))
 results = maxTemps.collect();
 
 resuls.collect()
+stationTemps1 = maxTemps1.map(lambda x: (x[01], x[21]))
+maxTemps2 = stationTemp2s.reduceByKey(lambda x, y: max(x,y))
